@@ -2,7 +2,7 @@
 > Just foolin' around.
 
 
-This file will become your README and also the index of your documentation.
+Find the official documentation [here](https://dropd.github.io/tryout_nbdev/)
 
 ## Install
 
