@@ -10,7 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: Try out nbdev
+      title: tryout_nbdev
       url: core.html
     output: web
     title: tryout_nbdev

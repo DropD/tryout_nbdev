@@ -1,6 +1,6 @@
 ---
 
-title: Try out nbdev
+title: tryout_nbdev
 
 
 keywords: fastai
@@ -29,6 +29,13 @@ nb_path: "00_core.ipynb"
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="First-function:-Hello-World">First function: Hello World<a class="anchor-link" href="#First-function:-Hello-World"> </a></h2>
@@ -46,7 +53,7 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="say_hello" class="doc_header"><code>say_hello</code><a href="https://github.com/DropD/tryout_nbdev/tree/default/tryout_nbdev/core.py#L6" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>say_hello</code>(<strong><code>to</code></strong>)</p>
+<h4 id="say_hello" class="doc_header"><code>say_hello</code><a href="https://github.com/DropD/tryout_nbdev/tree/default/tryout_nbdev/core.py#L9" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>say_hello</code>(<strong><code>to</code></strong>)</p>
 </blockquote>
 <p>Say hello to someone (or the whole world).</p>
 
@@ -111,6 +118,145 @@ nb_path: "00_core.ipynb"
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="First-Class:-Say">First Class: Say<a class="anchor-link" href="#First-Class:-Say"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="Say" class="doc_header"><code>class</code> <code>Say</code><a href="https://github.com/DropD/tryout_nbdev/tree/default/tryout_nbdev/core.py#L14" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Say</code>(<strong><code>channel</code></strong>:<code>Optional[Callable[[str], Any]]</code>=<em><code>None</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+</blockquote>
+<p>Say something to someone.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Say</span><span class="p">()</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="s2">&quot;Red Leader&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;Red Squadron&quot;</span><span class="p">)(</span><span class="s2">&quot;Follow me!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Red Leader -&gt; Red Squadron: Follow me!&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Say</span><span class="p">()</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="s2">&quot;Red Leader&quot;</span><span class="p">)()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Red Leader -&gt; All: ...&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">io</span>
+<span class="n">sio</span> <span class="o">=</span> <span class="n">Say</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">,</span> <span class="n">from_</span><span class="o">=</span><span class="s2">&quot;Odysseus&quot;</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;Pelops&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;My name is nobody!&quot;</span><span class="p">)()</span>
+<span class="n">sio</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Odysseus -&gt; Pelops: My name is nobody!&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 

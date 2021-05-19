@@ -3,6 +3,9 @@
 __all__ = ['say_hello', 'Say']
 
 # Cell
+from typing import Callable, Any, Optional
+
+# Cell
 def say_hello(to):
     """Say hello to someone (or the whole world)."""
     return f"Hello {to}!"
@@ -10,7 +13,7 @@ def say_hello(to):
 # Cell
 class Say:
     """Say something to someone."""
-    def __init__(self, channel: Optional[Callable[[str], Any]] = None, **kwargs) -> Any:
+    def __init__(self, channel: "Optional[Callable[[str], Any]]" = None, **kwargs) -> Any:
         self._channel = channel
         self._from = kwargs.get("from_", None)
         self._to = kwargs.get("to", None)
@@ -35,7 +38,7 @@ class Say:
         self._to = to
         return self
 
-    def __call__(self, message: Optional[str] = None) -> Any:
+    def __call__(self, message: "Optional[str]" = None) -> "Any":
         """Say the message on the configured channel."""
         self._msg = message or self._msg
         if self._channel is not None:
